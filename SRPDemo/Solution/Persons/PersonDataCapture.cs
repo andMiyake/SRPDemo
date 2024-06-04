@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRPDemo.Solution
+namespace SRPDemo.Solution.Persons
 {
     public class PersonDataCapture
     {

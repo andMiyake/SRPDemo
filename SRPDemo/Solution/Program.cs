@@ -1,4 +1,8 @@
-﻿namespace SRPDemo.Solution
+﻿using SRPDemo.Solution.Accounts;
+using SRPDemo.Solution.Messages;
+using SRPDemo.Solution.Persons;
+
+namespace SRPDemo.Solution
 {
     internal class Program
     {
@@ -8,10 +12,15 @@
 
             Person user = PersonDataCapture.Capture();
 
+            bool isUserValid = PersonValidator.Validate(user);
 
+            if(isUserValid == false)
+            {
+                StandardMessages.EndApplication();
+                return;
+            }
 
-            // Create a username for the person
-            Console.WriteLine($"Your username is {user.FirstName.Substring(0, 1)}{user.LastName}");
+            AccountGenerator.CreateAccount(user);
 
             StandardMessages.EndApplication();
         }

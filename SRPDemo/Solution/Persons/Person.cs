@@ -1,4 +1,4 @@
-﻿namespace SRPDemo.Solution
+﻿namespace SRPDemo.Solution.Persons
 {
     public class Person
     {
